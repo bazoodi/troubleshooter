@@ -64,20 +64,28 @@
             background-color: rgba(24, 24, 27, 0.9); /* zinc-900 transparency */
         }
 
-        /* Main Glass Card Style */
+        /* * Main Glass Card Style - Light Mode 
+         * Lavender Glow: Increased visibility (0.3 opacity, 40px spread) 
+         */
         #selection-view .glass-card, #solutions-area {
             background-color: rgba(255, 255, 255, 0.85); /* Slightly less transparency in light mode */
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(220, 220, 220, 0.5); /* Light border */
-            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05); /* Lighter shadow */
+            /* STRONGER LAVENDER GLOW FOR LIGHT MODE */
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08), 
+                        0 0 40px rgba(178, 140, 255, 0.3);
         }
 
-        /* Dark Card Style */
+        /* * Dark Card Style - Dark Mode 
+         * Lavender Glow: Completely removed (set to 0 opacity) 
+         */
         .dark #selection-view .glass-card, .dark #solutions-area {
             background-color: rgba(39, 39, 42, 0.85); /* zinc-800 transparency */
             border: 1px solid rgba(82, 82, 91, 0.5); /* zinc-700 transparency */
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            /* NO LAVENDER GLOW IN DARK MODE */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4),
+                        0 0 0px rgba(178, 140, 255, 0); 
         }
 
         /* Highly readable font stack for all standard text */
