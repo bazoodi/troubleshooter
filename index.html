@@ -252,6 +252,14 @@
                 </div>
             </div>
 
+            <!-- BACK TO ELDORADO BUTTON (UPDATED: Gold Color, No Icon) -->
+            <div class="text-center my-12">
+                <a href="https://www.eldorado.gg/dashboard/messages" target="_blank" class="inline-flex items-center justify-center px-8 py-3 text-lg font-bold text-gray-900 bg-amber-400 rounded-full shadow-xl shadow-amber-500/50 dark:bg-amber-500 dark:shadow-amber-600/50 dark:text-gray-900 hover:bg-amber-300 dark:hover:bg-amber-400 transition-all duration-300 transform hover:scale-[1.03] focus:outline-none focus:ring-4 focus:ring-amber-500/50">
+                    Back To Eldorado
+                </a>
+            </div>
+            <!-- END BACK TO ELDORADO BUTTON -->
+
             <!-- Troubleshooting Content Container: Uses Readable Font (Default) -->
             <div id="solutions-container" class="hidden max-w-7xl mx-auto w-full font-readable">
                 
@@ -459,6 +467,8 @@
         function goBack() {
             document.getElementById('solutions-container').classList.add('hidden');
             document.getElementById('selection-view').classList.remove('hidden');
+            // Show the Back To Eldorado button when returning to the selection view
+            document.querySelector('.text-center.my-12').classList.remove('hidden');
             // Clear the solutions area content on back
             document.getElementById('solutions-area').innerHTML = '';
             document.getElementById('troubleshooting-title').textContent = 'Select a Service to Begin';
@@ -485,6 +495,9 @@
             // 1. Swap Views (New Page Feel)
             document.getElementById('selection-view').classList.add('hidden');
             document.getElementById('solutions-container').classList.remove('hidden');
+            // Hide the Back To Eldorado button when viewing solutions
+            document.querySelector('.text-center.my-12').classList.add('hidden');
+
 
             titleElement.textContent = `Troubleshooting for ${currentGameName}`;
 
